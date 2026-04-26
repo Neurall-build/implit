@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="logo.jpg" alt="Implit Logo" width="128" height="128">
+  <h1>Implit</h1>
+  <p>Validate imports and catch fake AI-generated dependencies</p>
+</div>
+
+---
+
 # Implit
 
 Validate imports and catch fake AI-generated dependencies before they break your code.
