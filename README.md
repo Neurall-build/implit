@@ -8,7 +8,7 @@
   [![npm version](https://img.shields.io/npm/v/@neurall.build/implit?style=for-the-badge&color=blue)](https://www.npmjs.com/package/@neurall.build/implit)
   [![npm downloads](https://img.shields.io/npm/dt/@neurall.build/implit?style=for-the-badge)](https://www.npmjs.com/package/@neurall.build/implit)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-  [![GitHub stars](https://img.shields.io/github/stars/build-neurall/implit?style=for-the-badge)](https://github.com/build-neurall/implit)
+  [![GitHub stars](https://img.shields.io/github/stars/Neurall-build/implit?style=for-the-badge)](https://github.com/Neurall-build/implit)
   
   <img src="https://img.shields.io/badge/Node.js-18+-green?style=flat-square" />
   <img src="https://img.shields.io/badge/Zero_Config-✓-brightgreen?style=flat-square" />
@@ -266,7 +266,7 @@ Built by [Neurall](https://github.com/build-neurall) — making AI-assisted deve
   
   *Found this useful? Give us a ⭐ on GitHub!*
   
-  [![GitHub Repo](https://img.shields.io/badge/GitHub-build--neurall/implit-black?style=for-the-badge&logo=github)](https://github.com/build-neurall/implit)
+  [![GitHub Repo](https://img.shields.io/badge/GitHub-Neurall--build/implit-black?style=for-the-badge&logo=github)](https://github.com/Neurall-build/implit)
   [![NPM Package](https://img.shields.io/badge/NPM-@neurall.build/implit-red?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@neurall.build/implit)
   
 </div>

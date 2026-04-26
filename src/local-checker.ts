@@ -158,7 +158,7 @@ export async function checkLocalImports(
         results.push({
           import: imp,
           valid: false,
-          message: `Missing exports: ${missing.join(", ")}. Available: ${fileExports.slice(0, 5).join(", ")}${fileExports.length > 5 ? "..." : ""}`,
+          message: `Missing exports: ${missing.join(", ")}. Available: ${fileExports.join(", ")}`,
         });
         continue;
       }
