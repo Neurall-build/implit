@@ -246,16 +246,9 @@ npx @neurall.build/implit check your-file.ts --json
 
 ---
 
-## 🚀 Coming Soon
+## 🔮 Coming Soon
 
-### Phase 3 Features (In Development)
-
-- **VS Code Extension** — Real-time validation as you type
-- **AI Tool Plugins** — Direct integration with Claude, GPT, Gemini
-- **Auto-fix Mode** — Automatically correct imports when possible
-- **Monorepo Support** — Validate across workspace packages
-- **Custom Rules** — Define your own validation rules
-- **Dashboard** — Visual interface for teams
+### Phase 3: Multi-
 
 *Star the repo to get notified when these land!*
 
