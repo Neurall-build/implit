@@ -1,6 +1,6 @@
 {
   "name": "@neurall.build/implit",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Catch AI hallucinated dependencies and imports before they break your code",
   "type": "module",
   "bin": {

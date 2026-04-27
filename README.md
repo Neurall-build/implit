@@ -228,6 +228,39 @@ npx @neurall.build/implit check your-file.ts --json
 
 ---
 
+## 🔒 Security Features
+
+### ✓ Typosquatting Detection
+- Warns when packages are similar to popular ones (e.g., "lodas" vs "lodash")
+- Helps prevent supply chain attacks
+- High severity warnings for suspicious packages
+
+### ✓ Git Pre-commit Hook
+- Automatically validates imports before every commit
+- Catches hallucinations before they enter your codebase
+- Easy installation: `implit install-hook`
+
+### ✓ npm Audit Integration
+- Run `implit audit` to check for known vulnerabilities
+- Combines import validation with security scanning
+
+---
+
+## 🚀 Coming Soon
+
+### Phase 3 Features (In Development)
+
+- **VS Code Extension** — Real-time validation as you type
+- **AI Tool Plugins** — Direct integration with Claude, GPT, Gemini
+- **Auto-fix Mode** — Automatically correct imports when possible
+- **Monorepo Support** — Validate across workspace packages
+- **Custom Rules** — Define your own validation rules
+- **Dashboard** — Visual interface for teams
+
+*Star the repo to get notified when these land!*
+
+---
+
 ## 🏆 Who Uses Implit?
 
 - **AI Vibe Coders** — Validate ChatGPT/Claude code before running
