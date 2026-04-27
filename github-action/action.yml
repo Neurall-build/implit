@@ -1,0 +1,61 @@
+name: 'Implit - AI Hallucination Checker'
+description: 'Check for hallucinated AI-generated dependencies in your code'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  files:
+    description: 'Files or glob patterns to check'
+    required: false
+    default: 'src/**/*.{ts,tsx,js,jsx}'
+  fail-on-error:
+    description: 'Fail the workflow if hallucinations are found'
+    required: false
+    default: 'true'
+  fix:
+    description: 'Generate fix prompts for AI'
+    required: false
+    default: 'false'
+outputs:
+  found-issues:
+    description: 'Whether hallucinated imports were found'
+    value: ${{ steps.check.outputs.found-issues }}
+  report:
+    description: 'JSON report of issues found'
+    value: ${{ steps.check.outputs.report }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Run Implit
+      id: check
+      shell: bash
+      run: |
+        # Install implit
+        npm install -g @neurall.build/implit
+        
+        # Run check
+        OUTPUT=$(npx @neurall.build/implit check ${{ inputs.files }} ${{ inputs.fix == 'true' && '--fix' || '' }} --json 2>&1) || true
+        
+        # Parse results
+        if echo "$OUTPUT" | grep -q '"valid": false'; then
+          echo "found-issues=true" >> $GITHUB_OUTPUT
+          echo "report<<EOF" >> $GITHUB_OUTPUT
+          echo "$OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          
+          # Print human-readable output
+          npx @neurall.build/implit check ${{ inputs.files }} ${{ inputs.fix == 'true' && '--fix' || '' }}
+          
+          if [ "${{ inputs.fail-on-error }}" = "true" ]; then
+            exit 1
+          fi
+        else
+          echo "found-issues=false" >> $GITHUB_OUTPUT
+          echo "✅ No hallucinated imports found!"
+        fi

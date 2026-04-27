@@ -218,9 +218,12 @@ npx @neurall.build/implit check your-file.ts --json
 | Command | Description |
 |---------|-------------|
 | `implit check <file>` | Check a file for hallucinated imports |
+| `implit check <file> --security` | Also run security checks for typosquatting |
 | `implit check <file> --fix` | Generate fix prompt for AI |
 | `implit check <file> --json` | Output results as JSON |
 | `implit check <file> --no-cache` | Skip cache, always query npm |
+| `implit audit` | Run npm audit for vulnerabilities |
+| `implit install-hook` | Install git pre-commit hook |
 | `implit clear-cache` | Clear the dependency cache |
 
 ---
